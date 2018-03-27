@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blerter-service-rest
+spec:
+  type: NodePort
+  ports:
+    - name: blerter-service-rest
+      port: 4000
+      protocol: TCP
+      targetPort: 4000
+  selector:
+    name:  blerter-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: blerter-service-grpc
+spec:
+  type: LoadBalancer
+  ports:
+    - name:  blerter-service-grpc
+      port: 4002
+      protocol: TCP
+      targetPort: 4002
+  selector:
+    name:  blerter-service
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+ name: blerter-service
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name:  blerter-service
+      labels:
+        name:  blerter-service
+        app:  blerter-service
+    spec:
+      containers:
+        - name:  blerter-service
+          image: sirwhitemonkey/blerter-service
+          #resources:
+          #  requests:
+          #    memory: 1Gi
+          #  limits:
+          #    memory: 1Gi
+          env:
+            - name: TOKEN_SERVICE_HOST
+              value: TOKEN_SERVICE_HOST
+            - name: TOKEN_SERVICE_PORT
+              value: "4022"
+            - name: MASTER_SERVICE_HOST
+              value: MASTER_SERVICE_HOST
+            - name: MASTER_SERVICE_PORT
+              value: "4012"
+          ports:
+            - containerPort: 4000
+            - containerPort: 4002
+            
+

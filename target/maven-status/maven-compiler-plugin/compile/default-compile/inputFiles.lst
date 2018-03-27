@@ -1,0 +1,11 @@
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/rest/controller/RouterMasterController.java
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/Application.java
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/grpc/service/GrpcBlerterService.java
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/service/BlerterService.java
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/rest/controller/RxTokenController.java
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/rest/controller/TokenController.java
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/rest/controller/MasterController.java
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/factory/ResponseFactory.java
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/service/model/Response.java
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/rest/controller/RxMasterController.java
+/Users/rommelsumpo/DevelopmentArchives/blerter/blerter-service/src/main/java/com/blerter/configuration/CORSConfig.java
